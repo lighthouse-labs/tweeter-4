@@ -16,15 +16,18 @@ textarea {
     margin-top: .5em;
     margin-bottom: .5em;
     height: 50px;
-    outline: none;}
+    outline: none;
+}
+
+label {
+    justify-content: center;
+}
 
 button {
     background-color:#4056A1;
+    color: #FFFFFF;
     font-family: Bungee;
-    justify-content: right;
-
-;
-}
+};
 
 output {
     justify-content: right;
