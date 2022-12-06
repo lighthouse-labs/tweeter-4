@@ -1,16 +1,16 @@
-nav {
+ nav {
     height: 120px;
     display: flex;
     background-color: #4056A1;
     font-family: Bungee, sans-serif;
-    padding: 1em;
+    padding: 1.5em;
     top: 0;
     left: 0;
     right: 0;
     position: fixed;
-    color: #FFFF;
+    color: #FFFFFF;
     justify-content: space-between;
-}
+    } 
 
 .left {
     display: flex;
