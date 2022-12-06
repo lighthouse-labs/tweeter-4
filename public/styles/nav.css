@@ -1,0 +1,14 @@
+nav {
+    height: 120px;
+    background-color: #4056A1;
+    font-family: Bungee, sans-serif;
+    padding: 1em;
+    color: #FFFF;
+    justify-content: space-between;
+}
+
+.right {
+    content: "Write a new Tweet";
+    height: 60px
+    display: flex;
+}
