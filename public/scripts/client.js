@@ -3,8 +3,41 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-$(document).ready(function() {
+// $(document).ready(function() {
+  
+  const data = [
+    {
+      "user": {
+        "name": "Newton",
+        "avatars": "https://i.imgur.com/73hZDYK.png"
+        ,
+        "handle": "@SirIsaac"
+      },
+      "content": {
+        "text": "If I have seen further it is by standing on the shoulders of giants"
+      },
+      "created_at": 1461116232227
+    },
+    {
+      "user": {
+        "name": "Descartes",
+        "avatars": "https://i.imgur.com/nlhLi3I.png",
+        "handle": "@rd" },
+      "content": {
+        "text": "Je pense , donc je suis"
+      },
+      "created_at": 1461113959088
+    }
+  ]
 
+
+  const renderTweets = function (tweets) {
+    for (let key in tweets) {
+      createTweetElement(tweets[key]);
+    }
+  }
+
+  
   const createTweetElement = (tweetData) => {
     const userTweetText = (`<article class="tweet">${tweetData.content.text}</article>`);
     const userAvatar = (`<div class ="article-tweet-header-profile">${tweetData.avatars}>`);
@@ -16,7 +49,7 @@ $(document).ready(function() {
   <header class="article-tweet-header">
     <div class="article-tweet-header-profile">
       <div class="tweet-header-icon">
-        <img src= ${tweetData.avatars}">
+        <img src= ${tweetData.user.avatars}">
       </div>  
       <p>${tweetData.user.name}</p>
     </div>
@@ -32,6 +65,7 @@ $(document).ready(function() {
     </div>
   </footer>
 </article>`
+
     return userTweets;
   };
   
@@ -47,7 +81,7 @@ $(document).ready(function() {
     "created_at": 1461116232227
  }
  
+ console.log(renderTweets(data));
  const $tweet = createTweetElement(tweetData);
- console.log($tweet);
- $('#tweets-container').append($tweet); 
-});
+//  $('#tweets-container').append($tweet); 
+// });
