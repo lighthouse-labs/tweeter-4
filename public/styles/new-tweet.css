@@ -35,16 +35,25 @@ button {
 }
 
 
+article {
+    margin-top: 2em;
+    border: solid 5px #545454; 
+    padding: 10px;
+    
+}
+
 .article-tweet-header {
-    border: solid 5px #545454;
-    border-bottom: none;
     margin-top: 2em;
     margin-bottom: .5em;
+    height: 5px;
     background-color: #F5F5DC;
 }
 
 .article-tweet-footer {
-    border-left: solid 5px#545454;
-    border-right: solid 5px#545454;
+    display: flex;
+}
+
+p {
+    height: 100px;
     border-bottom: solid 5px #545454;
 }
