@@ -35,8 +35,7 @@ button {
 }
 
 
-.tweet-header {
-    flex: 100%;
+.article-tweet-header {
     border: solid 5px #545454;
     border-bottom: none;
     margin-top: 2em;
@@ -44,17 +43,8 @@ button {
     background-color: #F5F5DC;
 }
 
-.tweet-article {
-    flex: 100%;
-    border: solid 5px #545454;
-    top border: solid 5px ;
-    margin-top: 0em;
-    background-color: #F5F5DC;
-}
-
-.tweet-footer {
-    flex: 100%;
-    border: none;
+.article-tweet-footer {
+    border-left: solid 5px#545454;
+    border-right: solid 5px#545454;
     border-bottom: solid 5px #545454;
-    background-color: #F5F5DC;
 }
