@@ -1,11 +1,13 @@
 $(document).ready(function() {
-    const elem = document.getElementById('tweet-text');
+
     
-    function callback () {
-        console.log(this.name.length)
-    };
+    $('#tweet-text').on("input", function () {
+        const charCount = $(this).val().length;
+        console.log(charCount);
+       const counter = $(this).parent().find(".counter");
+        counter.()
+    })
     
-    elem.addEventListener("keydown", callback);
 });
 
 
