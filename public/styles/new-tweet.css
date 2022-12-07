@@ -56,33 +56,17 @@ article:hover {
     justify-content: space-between;  
 }
 
-.tweet-header-icon {
+.article-tweet-header-profile {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    order: -1;
-    margin-left: .5em;
+}
 
-
-
+.tweet-header-icon {
+    margin-right: .5em;
 }
 
 .tweet-handle {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: .75em;
-    order: 2;
+    margin-right: .5em;
 }
-
-.tweet-username {
-    display: flex;
-    order: 1;
-    justify-self: start;
-    margin-right: 27em;
-
-}
-
-
 
 .article-tweet-footer {
     display: flex;
@@ -110,14 +94,13 @@ article:hover {
 
 
 .fa-solid.fa-flag:hover {
-    text-shadow: 1px 1px 0px yellow;
-
+    color: yellow;
 }
 
 .fa-sharp.fa-solid.fa-retweet:hover {
-    text-shadow: 1px 1px 0px yellow;
+    color: yellow;
 }
 
 .fa-solid.fa-heart:hover {
-    text-shadow: 1px 1px 0px yellow;
+    color: yellow;
 }
