@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
 
     
@@ -5,9 +6,9 @@ $(document).ready(function() {
         const max = 140;
         const charCount = $(this).val().length;
         const counting = max - charCount;
-        
-        const counter = $(this).parent().find(".counter");
-        console.log(counting);
+        const counter = $(this).parent().find(".counting");
+
+        counter.text(counting)
     })
     
 });
