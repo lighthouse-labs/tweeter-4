@@ -46,16 +46,43 @@ article:hover {
 }
 
 .article-tweet-header {
-    margin-top: .1em;
-    margin-bottom: .5em;
-    height: .5px;
-    background-color: #F5F5DC;
+    margin-top: 1.5em;
+    margin-bottom: 2em;
+    height: 25px;
+    background-color: inherit;
     background-image: none;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    
+    flex-direction: row;  
+    justify-content: space-between;  
 }
+
+.tweet-header-icon {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    order: -1;
+    margin-left: .5em;
+
+
+
+}
+
+.tweet-handle {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: .75em;
+    order: 2;
+}
+
+.tweet-username {
+    display: flex;
+    order: 1;
+    justify-self: start;
+    margin-right: 27em;
+
+}
+
+
 
 .article-tweet-footer {
     display: flex;
@@ -81,28 +108,16 @@ article:hover {
     width: 100px;    
 }
 
-.tweet-footer-icons:hover {
-    text-shadow: 10px 10px 10px yellow;
 
-}
-.tweet-header-icon {
-    display: flex;
-    justify-content: flex-start;
-    margin-bottom: 1em;
-    width: 100px;
-}
-
-.tweet-handle {
-display: flex;
-justify-content: flex-end;
-margin-right: .75em;
-
+.fa-solid.fa-flag:hover {
+    text-shadow: 1px 1px 0px yellow;
 
 }
 
-.tweet-username {
-    display: flex;
-    justify-content: flex-end;
-    width: 100px;
+.fa-sharp.fa-solid.fa-retweet:hover {
+    text-shadow: 1px 1px 0px yellow;
 }
 
+.fa-solid.fa-heart:hover {
+    text-shadow: 1px 1px 0px yellow;
+}
