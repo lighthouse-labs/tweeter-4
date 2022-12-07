@@ -6,7 +6,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #3c00bf;
+    background-color: #eceaf1;
     background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
     /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
