@@ -36,7 +36,7 @@ $(document).ready(function() {
 
   
   const createTweetElement = (tweetData) => {
-    
+
     const userTweets = `<article class="article">
       <header class="article-tweet-header">
         <div class="article-tweet-header-profile">
@@ -60,6 +60,15 @@ $(document).ready(function() {
 
     return userTweets;
   };
+
+  fetch
+
+  $("#tweet-form").submit(function (event) {
+    event.preventDefault();
+    console.log($(this).serialzie());
+  })
+
+
   
  renderTweets(data);
  
