@@ -67,7 +67,7 @@ $(document).ready(function() {
     let parseData = ($(this).serialize());
     $.ajax ({
       type: "POST",
-      url: "http://localhost:8080/tweets",
+      url: "/tweets",
       data: parseData,
       success: function (data) {
         console.log(data);
@@ -76,8 +76,19 @@ $(document).ready(function() {
   });
 
 
+    const loadTweets = function  () {
 
-  
+      $.getJSON ({
+        url: "/tweets",
+        data: data,
+        success: function (data) {
+            renderTweets(data);
+        }
+      })
+    }
+
+
+  loadTweets();
  renderTweets(data);
  
 });
