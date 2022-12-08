@@ -110,6 +110,8 @@ article:hover {
 
 
 .new-tweet-err-message {
-    display: flex;
+    display: none;
+    position: relative;
     justify-content: center;
+    background-color: #c51244;
 }

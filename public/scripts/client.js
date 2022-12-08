@@ -41,12 +41,15 @@ $(document).ready(function() {
   $("#tweet-form").submit(function (event) {
     event.preventDefault();
     let parseData = ($(this).serialize());
-    const tweetText = $('#tweet-text').val()
+    const tweetText = $('#tweet-text').val();
 
+    if (tweetText.length !== 0 || tweetText.length !== null || tweetText.length > -1) {
+     $('.new-tweet-err-message').hide().text().slideUp(750);
+    }
     if (tweetText.length > 140) {
-      return $('.new-tweet-err-message').text("You've exceed the characer limit!").slideDown(1500);
+       $('.new-tweet-err-message').text("You've exceed the characer limit!").slideDown(750);
     } else if (tweetText.length === 0 || tweetText.length === null) {
-      return $('.new-tweet-err-message').text("Your Tweet box is empty!").slideDown(1500);
+        $('.new-tweet-err-message').text("Your Tweet box is empty!").slideDown(750);
     } else {
       $.ajax ({
         type: "POST",
