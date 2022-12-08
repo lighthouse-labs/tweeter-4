@@ -1,3 +1,4 @@
+const { text } = require("body-parser");
 
 $(document).ready(function() {
 
@@ -9,7 +10,6 @@ $(document).ready(function() {
     }
   
   }
-
   
   const createTweetElement = (tweetData) => {
 
@@ -41,6 +41,7 @@ $(document).ready(function() {
   $("#tweet-form").submit(function (event) {
     event.preventDefault();
     let parseData = ($(this).serialize());
+    const tweetText = $('#tweet-text: input').val();
     $.ajax ({
       type: "POST",
       url: "/tweets",
@@ -49,8 +50,11 @@ $(document).ready(function() {
         console.log(data);
       }
     })
+    if ( tweetText > 140) {
+      event.preventDefault();
+      alert("Your Tweet exceeds the character limit!")
+    }
   });
-
 
     const loadTweets = function  () {
 
@@ -64,6 +68,6 @@ $(document).ready(function() {
 
 
   loadTweets();
- renderTweets();
+  renderTweets();
  
 });
