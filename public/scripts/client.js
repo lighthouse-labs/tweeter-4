@@ -65,8 +65,8 @@ $(document).ready(function() {
 
   $("#tweet-form").submit(function (event) {
     event.preventDefault();
-    console.log($(this).serialzie());
-  })
+    console.log($(this).serialize());
+  });
 
 
   
