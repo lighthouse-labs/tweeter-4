@@ -61,12 +61,20 @@ $(document).ready(function() {
     return userTweets;
   };
 
-  fetch
 
   $("#tweet-form").submit(function (event) {
     event.preventDefault();
-    console.log($(this).serialize());
+    let parseData = ($(this).serialize());
+    $.ajax ({
+      type: "POST",
+      url: "http://localhost:8080/tweets",
+      data: parseData,
+      success: function (data) {
+        console.log(data);
+      }
+    })
   });
+
 
 
   
