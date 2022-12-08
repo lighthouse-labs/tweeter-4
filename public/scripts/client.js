@@ -3,15 +3,16 @@ $(document).ready(function() {
 
 
   const renderTweets = function (tweets) {
-    for (let key in tweets) {
-      const $tweet = createTweetElement(tweets[key]);
+    let reversedTweets = tweets.reverse();
+    for (let key in reversedTweets) {
+      const $tweet = createTweetElement(reversedTweets[key]);
       $('#tweets-container').append($tweet);     
     }
   
   }
   
   const createTweetElement = (tweetData) => {
-
+    
     const userTweets = `<article class="article">
       <header class="article-tweet-header">
         <div class="article-tweet-header-profile">
@@ -40,36 +41,37 @@ $(document).ready(function() {
   $("#tweet-form").submit(function (event) {
     event.preventDefault();
     let parseData = ($(this).serialize());
-    const tweetText = $('#tweet-text').val().length;
-    $.ajax ({
-      type: "POST",
-      url: "/tweets",
-      data: parseData,
-      success: function (data) {
-        console.log(data);
-      }
-    })
-    if (tweetText > 140) {
-      event.preventDefault();
+    const tweetText = $('#tweet-text').val()
+
+    if (tweetText.length > 140) {
       alert("Your Tweet exceeds the character limit!");
-    } else if (tweetText === 0 || tweetText === null) {
-      event.preventDefault();
+    } else if (tweetText.length === 0 || tweetText.length === null) {
       alert("Your Tweet is empty!");
-    }
-  });
-
-    const loadTweets = function  () {
-
-      $.getJSON ({
+    } else {
+      $.ajax ({
+        type: "POST",
         url: "/tweets",
+        data: parseData,
         success: function (data) {
-            renderTweets(data);
+          loadTweets();
         }
       })
     }
+  });
+
+  const loadTweets = function  () {
+
+    $.getJSON ({
+      url: "/tweets",
+      success: function (data) {
+        $('#tweets-container').empty();
+        renderTweets(data);
+      }
+    })
+  }
 
 
   loadTweets();
-  renderTweets();
- 
+
+
 });
