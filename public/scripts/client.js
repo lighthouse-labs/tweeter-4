@@ -12,7 +12,7 @@ $(document).ready(function() {
   }
   
   const createTweetElement = (tweetData) => {
-    
+
     const userTweets = `<article class="article">
       <header class="article-tweet-header">
         <div class="article-tweet-header-profile">
@@ -44,9 +44,9 @@ $(document).ready(function() {
     const tweetText = $('#tweet-text').val()
 
     if (tweetText.length > 140) {
-      alert("Your Tweet exceeds the character limit!");
+      return $('.new-tweet-err-message').text("You've exceed the characer limit!").slideDown(1500);
     } else if (tweetText.length === 0 || tweetText.length === null) {
-      alert("Your Tweet is empty!");
+      return $('.new-tweet-err-message').text("Your Tweet box is empty!").slideDown(1500);
     } else {
       $.ajax ({
         type: "POST",

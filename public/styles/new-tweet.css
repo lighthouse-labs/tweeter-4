@@ -107,3 +107,9 @@ article:hover {
 .fa-solid.fa-heart:hover {
     color: yellow;
 }
+
+
+.new-tweet-err-message {
+    display: flex;
+    justify-content: center;
+}
