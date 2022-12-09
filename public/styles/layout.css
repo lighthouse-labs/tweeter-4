@@ -49,27 +49,43 @@ body {
     align-items: stretch;
   }
 
-
-
   
 }
 
 
 @media only screen and (min-width: 1024px) {  
+
+  nav {
+    font-size: 25px;
+  }
+
   header {
-    float: left;
+   float: left;
+   display: flex;
+  }
+
+  header .profile-pic {
+    width: 150%;
   }
   
   body {
     font-size: inherit;
-    font: red;
-
-}
-  main {
-    float: right;
+    position: relative;
   }
+
+  .container {
+    margin-top: 10em;
+    margin-right: 4em;
+    display: flex;
+    flex-direction: column;
+    float: right;
+    width: 50%;
+  }
+
+ 
+}
 
   
 
-}
+
 
