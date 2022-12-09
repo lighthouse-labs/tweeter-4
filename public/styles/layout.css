@@ -33,6 +33,34 @@ body {
   font-family: Source Sans Pro, sans-serif;
 } 
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+@media only screen and (min-width: 420px) {
+
+    body {
+      font-size: 20px;
+      display: flex;
+      flex-direction: column;
+  }
+
+  main {
+    width: 100%;
+    margin: 2em auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+
+@media only screen and (min-width: 1024px) {
+  
+  body {
+    font-size: inherit;
+    display: flex;
+    flex-direction: column;
+    font: red;
+    flex-direction: column;
+}
+
+  
+}
+

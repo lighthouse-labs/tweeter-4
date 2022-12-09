@@ -22,7 +22,6 @@ textarea {
     background-color: inherit;
 }
 
-
 button {
     background-color:#4056A1;
     color: #FFFFFF;
@@ -95,7 +94,6 @@ article:hover {
     width: 100px;    
 }
 
-
 .fa-solid.fa-flag:hover {
     color: yellow;
 }
@@ -107,7 +105,6 @@ article:hover {
 .fa-solid.fa-heart:hover {
     color: yellow;
 }
-
 
 .new-tweet #new-tweet-err-message {
     display: none;
