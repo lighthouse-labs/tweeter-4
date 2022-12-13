@@ -63,9 +63,8 @@ $(document).ready(function() {
     if (tweetText.length > 140) {
        $('#new-tweet-err-message').text("You've exceed the characer limit!").slideDown(750);
        return;
-    
-       //if tweetText returns falsey return error message
     }  
+    //if tweetText returns falsey return error message
     if (!tweetText.length) {
         $('#new-tweet-err-message').text("Your Tweet box is empty!").slideDown(750);
         return;
