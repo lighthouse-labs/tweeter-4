@@ -55,18 +55,20 @@ $(document).ready(function() {
     // represnts value of tweet-texts 
     const tweetText = $('#tweet-text').val();
     
-    // if statement to confirm that the user has none of the error checks below and hides error message
-    if (tweetText.length !== 0 || tweetText.length !== null || tweetText.length > -1) {
-     $('#new-tweet-err-message').hide().text();
-
+    // if statement tweetText returns truthy that the user has none of the error checks below and hides error message
+    if (tweetText.length) {
+      $('#new-tweet-err-message').hide().text();
     }
     // if the length of the user tweet is greater 140 characters returns error message
     if (tweetText.length > 140) {
        $('#new-tweet-err-message').text("You've exceed the characer limit!").slideDown(750);
-
-    // if the length of the users tweet is greater 140 characters returns error message
-    } else if (tweetText.length === 0 || tweetText.length === null) {
+       return;
+    
+       //if tweetText returns falsey return error message
+    }  
+    if (!tweetText.length) {
         $('#new-tweet-err-message').text("Your Tweet box is empty!").slideDown(750);
+        return;
 
     } else {
       // makes ajax post request to tweets 
@@ -76,9 +78,12 @@ $(document).ready(function() {
         //takes server data response 
         data: parseData,
         
-        // calls the loadTweets function
+        // calls the loadTweets function clears tweet-text box and resets char counter to 140
         success: function (data) {
           loadTweets();
+          $('#tweet-text').val(""); 
+          $('.counting').text(140);
+
         }
       })
     }

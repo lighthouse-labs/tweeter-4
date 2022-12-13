@@ -16,7 +16,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Getting Started
 
-1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
+1. [Create](https://github.com/Njoe00/Tweeter1) a new repository using this repository as a template.
 2. Clone your repository onto your local device.
 3. Install dependencies using the `npm install` command.
 3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
@@ -30,7 +30,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## How to use Tweeter App
 1. Load `localhost:8080` onto your browswer.
-2. Click onto the 'What are you humming about?' text-box.
+2. Click onto the `'What are you humming about?` text-box.
 3. Type whatever you're thinking about in the moment! Don't worry about the consequences!
 4. Click the `Tweet` button the left-hand side.
 5. See your thoughts come to life and rest well knowing the world know exactly what you're thinking!
